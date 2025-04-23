@@ -9,16 +9,25 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import os
 
 
 # ## Importing models:
 
 # In[5]:
 
+# Get the absolute path of the current script
+base_path = os.path.dirname(__file__)  # This is "/mount/src/focusing_web_or_app/model_dep"
 
-lr_model = pickle.load(open('model_lr.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
-encoder = pickle.load(open('encorder.pkl', 'rb'))
+# Construct correct paths to model and scalers
+model_path = os.path.join(base_path, "model_lr.pkl")
+scaler_path = os.path.join(base_path, "scaler.pkl.pkl")
+encoder_path = os.path.join(base_path, "encorder.pkl.pkl")
+
+# Load the model and scalers
+lr_model = pickle.load(open(model_path, "rb"))
+scaler = pickle.load(open(scaler_path, "rb"))
+encoder = pickle.load(open(encoder_path, "rb"))
 
 
 # ## Deployment:
