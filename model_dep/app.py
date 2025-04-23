@@ -16,18 +16,9 @@ import os
 
 # In[5]:
 
-# Get the absolute path of the current script
-base_path = os.path.dirname(__file__)  # This is "/mount/src/focusing_web_or_app/model_dep"
-
-# Construct correct paths to model and scalers
-model_path = os.path.join(base_path, "model_lr.pkl")
-scaler_path = os.path.join(base_path, "scaler.pkl.pkl")
-encoder_path = os.path.join(base_path, "encorder.pkl.pkl")
-
-# Load the model and scalers
-lr_model = pickle.load(open(model_path, "rb"))
-scaler = pickle.load(open(scaler_path, "rb"))
-encoder = pickle.load(open(encoder_path, "rb"))
+lr_model = pickle.load(open('/model_dep/model_lr.pkl', 'rb'))
+scaler = pickle.load(open('/model_dep/scaler.pkl', 'rb'))
+encoder = pickle.load(open('/model_dep/encorder.pkl', 'rb'))
 
 
 # ## Deployment:
