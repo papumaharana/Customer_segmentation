@@ -16,9 +16,9 @@ import os
 
 # In[5]:
 
-lr_model = pickle.load(open('/model_dep/model_lr.pkl', 'rb'))
-scaler = pickle.load(open('/model_dep/scaler.pkl', 'rb'))
-encoder = pickle.load(open('/model_dep/encorder.pkl', 'rb'))
+lr_model = pickle.load(open('model_dep/model_lr.pkl', 'rb'))
+scaler = pickle.load(open('model_dep/scaler.pkl', 'rb'))
+encoder = pickle.load(open('model_dep/encorder.pkl', 'rb'))
 
 
 # ## Deployment:
